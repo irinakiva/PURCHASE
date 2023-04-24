@@ -1,3 +1,5 @@
+IF OBJECT_ID('dbo.MakeFamilyPurchase','P') IS NOT NULL DROP PROC dbo.MakeFamilyPurchase;
+GO;
 CREATE PROC dbo.MakeFamilyPurchase
 @FamilySurName varchar(255)
  
@@ -20,3 +22,4 @@ WHERE Family.Surname  = @FamilySurName
  
 ELSE
 PRINT 'SurName ' + @FamilySurName + ' does not exist';
+GO;
